@@ -43,6 +43,10 @@ function draw() {
     plinkos.push(new Plinkos(j,375));
   }
 
+  if(frameCount%5===0){
+    particles.push(new Particles(random(40, 440), 30));
+  }
+
   for (var k = 0; k < plinkos.length; k++) {
     plinkos[k].display();
   }
@@ -51,12 +55,8 @@ function draw() {
     divisions[j].display();
   }
 
-  if(frameCount%60 === 0){
-    particles.push(new Particles(random(480/2-200, 480/2+200)));
-  }
-
-  for (var j = 0; j < particles.length; j++) {
-    particles[j].display();
+  for (var h = 0; h < particles.length; h++) {
+    particles[h].display();
   }
 
   ground.display();
